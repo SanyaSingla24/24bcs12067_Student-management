@@ -1,6 +1,4 @@
-
 package com.student.studentmanagement.controller;
-
 import com.student.studentmanagement.entity.Student;
 import com.student.studentmanagement.service.StudentService;
 

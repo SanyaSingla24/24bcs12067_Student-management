@@ -1,5 +1,7 @@
 package com.student.studentmanagement.service;
+
 import com.student.studentmanagement.entity.Student;
+import com.student.studentmanagement.exception.StudentNotFoundException;
 import com.student.studentmanagement.repository.StudentRepository;
 
 import org.springframework.stereotype.Service;
@@ -30,7 +32,7 @@ public class StudentService {
     public Student getStudentById(Long id) {
         return studentRepository.findById(id)
                 .orElseThrow(() ->
-                    new RuntimeException("Student not found with ID: " + id));
+                        new StudentNotFoundException(id));
     }
 
     // 4. Update student details
